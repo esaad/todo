@@ -11,8 +11,6 @@
 # Last Updated: August 5, 2015 by Esaad
 #####################################################################
 
-
-# make sure you use todo -GA
 echo "Script ran at $(date)";
 
 notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,created)"
