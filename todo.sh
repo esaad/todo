@@ -17,8 +17,8 @@ echo "Script ran at `date`";
 
 
 # check if todo file exists 
-todo_path="$HOME/todos/tod.txt";
-backup_path="$HOME/todos/todo.txt.tmp";
+todo_path="$HOME/.todo.txt";
+backup_path="$HOME/.todo.txt.tmp";
 
 # small check to create backup path if user forgets to create
 if [ ! -d "$backup_path" ]; then
