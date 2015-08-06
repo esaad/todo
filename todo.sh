@@ -12,6 +12,7 @@
 #####################################################################
 
 
+# make sure you use todo -GA 
 
 echo "Script ran at `date`";
 
@@ -25,13 +26,13 @@ if [ ! -d "$backup_path" ]; then
     # Control will enter here if $backup_path doesn't exist.
     echo "**** TODO FILE DOES NOT EXIST ****"
     echo "**** CREATING TODO FILE: $backup_path ****"
-    echo `todo` > $backup_path;
+    echo `todo -GA` > $backup_path;
     chmod 777 $backup_path; 
 fi
 
 # check to see if todo has changed or not
 
-echo "`todo`" > $todo_path;
+echo "`todo -GA`" > $todo_path;
 
 DIFF=$(diff $todo_path $backup_path) 
 if [ "$DIFF" != "" ] 
