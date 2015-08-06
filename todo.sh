@@ -15,6 +15,6 @@
 # make sure you use todo -GA
 echo "Script ran at $(date)";
 
-notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,created)"
+notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,priority)"
 
 echo "End of script";
