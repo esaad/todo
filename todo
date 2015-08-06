@@ -1,3 +1,8 @@
 #Cron job for todo.sh
 #Executing every 10 minutes
-00,10,20,30,40,50 * * * * $USER todo.sh >/dev/null 2>&1
+#00,10,20,30,40,50 * * * * $USER todo.sh >/dev/null 2>&1
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/bin/X11
+TERM=xterm
+*/1 * * * * $USER export DISPLAY=:0 && eval "export $(egrep -z DBUS_SESSION_BUS_ADDRESS /proc/$(pgrep -u $LOGNAME gnome-session)/environ)" && todo.sh
