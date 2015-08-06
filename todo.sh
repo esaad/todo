@@ -6,7 +6,7 @@
 # Purpose: Add to cron job to send notifications for pending tasks
 # Check variables: todo_path ; backup_path
 # Support : Linux
-# Requirements : bash
+# Requirements : bash, notify-osd, devtodo
 # Version: 1.0
 # Last Updated: August 5, 2015 by Esaad
 #####################################################################
