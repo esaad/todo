@@ -1,0 +1,3 @@
+#Cron job for todo.sh
+#Executing every 10 minutes
+00,10,20,30,40,50 * * * * $USER todo.sh >/dev/null 2>&1

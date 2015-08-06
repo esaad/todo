@@ -13,8 +13,6 @@
 
 
 # make sure you use todo -GA
-set -x
-
 echo "Script ran at $(date)";
 
 
