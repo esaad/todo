@@ -15,22 +15,6 @@
 # make sure you use todo -GA
 echo "Script ran at $(date)";
 
-
-# check if todo file exists
-result_path="/tmp/todo"
-backup_path="/tmp/todo.tmp"
-
-# check to see if todo has changed or not
-echo "$(todo -G --sort done,created)" | tee $backup_path
-
-diff $result_path $backup_path
-rval=$?
-
-if [[ $rval -ne 0 ]]
-then
-    cp $backup_path $result_path
-    notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(cat $result_path)"
-fi
-rm -f $backup_path
+notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,created)"
 
 echo "End of script";
