@@ -13,6 +13,7 @@
 
 echo "Script ran at $(date)";
 
-DISPLAY=:0 notify-send -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,priority)"
+DISPLAY=:0 notify-send -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,priority)" $
+canberra-gtk-play -i message >/dev/null 2>&1
 
 echo "End of script";
