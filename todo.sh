@@ -13,6 +13,6 @@
 
 echo "Script ran at $(date)";
 
-notify-send -u critical -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,created)"
+DISPLAY=:0 notify-send -i appointment-soon.png "***REMINDER***" "\n$(todo -G --sort done,created)"
 
 echo "End of script";
